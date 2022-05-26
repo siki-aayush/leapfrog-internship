@@ -2,196 +2,284 @@
 <html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Siki's Blog</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Siki's Blog</title>
 </head>
 
-<header>
-    <nav class="navbar">
-        <ul class="navbar__left">
-            <li>LOGO</li>
-        </ul>
-        <ul class="navbar__right">
-            <li class="navbar__right__el">
-                Home
-            </li>
-            <li class="navbar__right__el">
-                About me
-            </li>
-        </ul>
-    </nav>
-</header>
-
 <body>
-    <section class="blog">
-        <div class="blog__header">
-            <h1 class="blog__header__title">Lofi Design</h1>
-            <img src="https://blog.adobe.com/en/publish/2017/11/29/media_1de79626e10dca8adb854a371f63f96acf248a171.png?width=2000&format=webply&optimize=medium"
-                alt="Title image" class="blog__header__img">
-            <p>
-                In this article, I’ll provide answers to the following questions related to prototyping:
-            <ul>
-                <li>
-                    What is a prototype and when do you need it?
-                </li>
-                <li>
+  <header id="header">
+    <nav class="navbar">
+      <ul class="navbar__left">
+        <li><a href="#"><img src="https://cdn.logojoy.com/wp-content/uploads/2018/05/30164225/572.png" alt="blog logo"
+              width="70" height="50"></a></li>
+      </ul>
+      <ul class="navbar__right">
+        <li class="navbar__right__el">
+          <a href="#">Home</a>
+        </li>
+        <li class="navbar__right__el">
+          <a href="#">About me</a>
+        </li>
+        <li class="navbar__right__el">
+          <a href="#footer" target="_blank">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-                    What is “prototype fidelity” and what is the difference between a low-fidelity prototype and a
-                    high-fidelity
-                    prototype?
-                </li>
-                <li>
-                    What techniques can be used to build prototypes?
-                </li>
-            </ul>
-            </p>
+  <h1 class="title">Low-Fidelity and High-Fidelity Wireframes</h1>
 
+  <section class="blog">
+    <div class="blot__listofcontents">
+      <h2>List of contents</h2>
+      <ul>
+        <li>
+          <a href="#intro">Introduction</a>
+        </li>
+        <li>
+          <a href="#wireframe">What is wireframing?</a>
+        </li>
+        <li>
+          <a href="#fidelity">What is fidelity?</a>
+        </li>
+        <li>
+          <a href="#low_fidelity_wireframes">Low fidelity wireframes</a>
+        </li>
+        <li>
+          <a href="#high_fidelity_wireframes">High fidelity wireframes</a>
+        </li>
+        <li>
+          <a href="#pros_cons">Pros and Cons</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="blog__content">
+      <div id="intro">
+        <h2 class="blog__content__pHeader">Introduction</h2>
+        <img src="https://landing.moqups.com/blog/wp-content/uploads/2021/06/01.-Hero-Image-800x0-c-default.png"
+          alt="Title image" class="blog__header__img" height="400" width="800">
+        <p>To establish an effective workflow for your team, it’s important to
+          understand the difference between low-fidelity wireframes and high-fidelity prototypes.</p>
+      </div>
+
+      <div id="wirefame">
+        <h2 class="blog__content_pHeader">What is wireframing?</h2>
+        <p>
+          The term <strong>wireframe</strong> predates its current use in digital design. Web and app designers borrowed
+          the term
+          from the world of CAD (computer-aided design) and CGI animation. And they, in turn, borrowed it from earlier
+          fields of car modelling, stop-motion animation, and sculpture.
+
+        </p>
+        In fact, most people are first exposed to wireframing when they’re children in primary school, and use
+        chicken-wire to build frames for their papier-mâché puppets, masks and dinosaurs!
+
+        <p>
+          In each of these cases, a wireframe serves the same purpose: to act as a rough approximation of the final
+          product before the addition of final elements like surfaces, skins, colours, textures, lighting, etc.
+
+        </p>
+
+        <p>
+          Think of a wireframe as the blueprint for a final design. It makes sense to experiment with this kind of
+          skeleton – early in the design process – before a lot of time and money has been invested in a polished
+          product, or the final coding begins.To get a sense of what wireframing looks like in web design, here’s a
+          wireframe of a shopping cart, taken from our e-Commerce Website template bundle. You can see that most of
+          the important elements of the page are already in place. However, instead of full-color, branded graphics,
+          and descriptive content, the wireframe uses generic placeholders:
+        </p>
+        <img src="https://moqups.com/blog/wp-content/uploads/2021/06/02.-Lo-fi-Wireframe-Example.png" alt="wireframe"
+          width="800" height="400">
+      </div>
+
+
+      <div id="fidelity">
+        <h2 class="blog__content__pHeader">What is fidelity?</h2>
+        <p>Prototypes don’t necessarily look like final products — they can have different fidelity. The
+          fidelity of
+          a prototype refers to how it conveys the look-and-feel of the final product (basically, its
+          level of
+          detail and realism). Fidelity can vary in the areas of:
+
+        </p>
+        <ul>
+          <li>
+            Visual design
+          </li>
+          <li>
+            Content
+          </li>
+          <li>
+            Interactivity
+          </li>
+        </ul>
+      </div>
+
+
+      <div id="low_fidelity_wireframes">
+        <h2 class="blog__content__pHeader">What are low-fidelity wireframes?</h2>
+        <img src="https://moqups.com/blog/wp-content/uploads/2021/06/04.-Lo-fi-Wireframe-Template.png" alt="wireframe"
+          height="400" width="800">
+        <p>
+          Low-fi wireframes act as the initial blueprints for web pages and app screens – a rough
+          approximation of the final product. They’re especially useful in the early stages of product
+          development because they put the focus on pure functionality, not aesthetics.
+        </p>
+        <p>
+          Accordingly, they’re rendered in a monochrome palette – deliberately excluding specific details
+          like
+          colours, fonts, logos, and exact sizing. Instead, low-fidelity wireframes use image placeholders
+          and
+          basic shapes to indicate what elements will ultimately populate a page. Generic ‘lorem ipsum’
+          text
+          or ‘redacted’ fonts stand in for future content and copy.
+          Here’s one of our low-fidelity wireframe templates to give you a sense of what all this looks
+          like
+          in practice:
+        </p>
+      </div>
+
+      <div id="high_fidelity_wireframes">
+        <h2 class="blog__content__pHeader">What are high fidelity wireframes?</h2>
+        <p>
+          High-fi wireframes are thrilling because they mimic the look and feel of an app or website –
+          before
+          it’s actually developed. They normally include all the branding, copy, colors, logos, fonts, and
+          graphics that will be part of the final product.
+        </p>
+        <p>
+          Hi-fi wireframes are most useful at the tail end of the design process, after initial
+          user-research
+          is complete, and underlying decisions about both layout and content have been made.
+
+        </p>
+
+        <p>
+
+          Wireframes with hi-fi elements, but no interactivity, are often called mockups. A mockup becomes
+          a
+          high-fidelity prototype once interactions, transitions, or animations are added. With clickable
+          menus and buttons, hi-fi prototypes provide a visceral sense of the user experience. This allows
+          teams to tweak usability before final design approvals, testing, and hand-off to the developers.
+
+        </p>
+
+        <p>
+          If you have your hi-fi content ready to go, here’s a high-fidelity wireframe template that you
+          can
+          quickly customize. Just swap in your copy, images, graphics, branding, and colors:
+        </p>
+        <img src="https://moqups.com/blog/wp-content/uploads/2021/06/05.-Hi-fi-Wireframe-Template.png" alt="wireframe"
+          height="400" width="800">
+      </div>
+
+      <div id="pros_cons">
+        <h2 class="blog__content__pHeader">Pros and Cons</h2>
+        <div>
+          <h3 class="blog__content__sHeader">Pros and Cons of Lofi</h3>
+          <table class="blog__content__table">
+            <tr>
+              <th>Pros</th>
+              <th>Cons</th>
+            </tr>
+            <tr>
+              <td>Quick to build, easy to iterate</td>
+              <td>Less inspiring than hi-fi</td>
+
+            </tr>
+            <tr>
+              <td>Focuses on function not aesthetics</td>
+              <td>Lacks full interactivity</td>
+
+            </tr>
+            <tr>
+              <td>Establishes consensus early on</td>
+              <td>Inadequate for unmoderated testing</td>
+            </tr>
+            <tr>
+              <td>Works out flow before costly content</td>
+              <td>Unsuited for investor pitch</td>
+            </tr>
+          </table>
         </div>
-        <div class="blog__content">
-            <div>
-                <h2 class="blog__content__pHeader">What a prototype is, and what it isn’t</h2>
-                <p>In its basic form, a prototype is an expression of design intent. Prototyping allows designers to
-                    present
-                    their designs and see them in action. In the context of digital products, a prototype is a
-                    simulation of
-                    the final interaction between the user and the interface. Depending on what a product team needs a
-                    prototype to do, it can simulate an entire app or just a single interaction.
 
-                    The following are two cases that require a prototype:
-                </p>
+        <div>
+          <h3 class="blog__content__sHeader">Pros and Cons of Hifi</h3>
+          <table class="blog__content__table">
+            <tr>
+              <th>Pros</th>
+              <th>Cons</th>
+            </tr>
+            <tr>
+              <td>Offers look and feel of final product</td>
+              <td>Needs a longer timeline</td>
 
-                <ul>
-                    <li>
-                        <strong>Ensure the design concept works as intended.</strong> In most cases, it’s relatively
-                        easy to
-                        test a concept with real users. Once an interactive version of a product idea is in the hands of
-                        real users, a product team will be able to see how a target audience wants to use the product.
-                        Based
-                        on this feedback, it’s possible to adjust an initial concept.
-                    </li>
-                    <li>
-                        <strong>Determine if people are able use a product.</strong>Prototyping is essential for finding
-                        and
-                        resolving usability issues before launch. Testing reveals areas that need improvement. That’s
-                        why so
-                        many product teams create prototypes, have users test them, and iterate the design until it’s
-                        good
-                        enough.
-                    </li>
-                </ul>
+            </tr>
+            <tr>
+              <td>Clickable and interactive</td>
+              <td>Requires graphics and content</td>
 
-            </div>
-
-            <div>
-                <h2 class="blog__content__pHeader">What is fidelity?</h2>
-                <p>Prototypes don’t necessarily look like final products — they can have different fidelity. The
-                    fidelity of
-                    a prototype refers to how it conveys the look-and-feel of the final product (basically, its level of
-                    detail and realism). Fidelity can vary in the areas of:
-
-                </p>
-                <ul>
-                    <li>
-                        Visual design
-                    </li>
-                    <li>
-                        Content
-                    </li>
-                    <li>
-
-                        Interactivity
-                    </li>
-                </ul>
-            </div>
-
-            <div>
-                <h2 class="blog__content__pHeader">Low-fidelity prototyping</h2>
-                <p>Low-fidelity (lo-fi) prototyping is a quick and easy way to translate high-level design concepts into
-                    tangible and testable artifacts. The first and most important role of lo-fi prototypes is to check
-                    and
-                    test functionality rather than the visual appearance of the product. Here are the basic
-                    characteristics
-                    of low-fidelity prototyping:</p>
-                <div>
-                    <h3 class="blog__content__sHeader">Pros</h3>
-                    <ul>
-                        <li>
-                            <strong>Inexpensive</strong> The clear advantage of low-fidelity prototyping is its
-                            extremely
-                            low cost.
-
-                        </li>
-
-                        <li>
-                            <strong>Fast</strong>
-
-                            It’s possible to create a lo-fi paper prototype in just five to ten minutes. This allows
-                            product
-                            teams to explore different ideas without too much effort.
-                        </li>
-
-                        <li>
-                            <strong>Collaborative</strong>
-                            This type of prototyping stimulates group work. Since lo-fi prototyping doesn’t require
-                            special skills, more people can be involved in the design process. Even non-designers can
-                            play
-                            an active
-                            part in the idea-formulation process.
-
-
-                        </li>
-                        <li>
-                            <strong>Clarifying</strong>
-                            Both team members and stakeholders will have a much clearer expectation about an upcoming
-                            project.hgygh
-
-                        </li>
-                    </ul>
-
-                    <h3 class="blog__content__sHeader">Cons</h3>
-                    <ul>
-                        <li>
-                            <strong>Uncertainty during testing</strong>
-
-                            With a lo-fi prototype, it might be unclear to test participants what is
-                            supposed to work and what isn’t. A low-fidelity prototype requires a lot of imagination from
-                            the
-                            user,
-                            limiting the outcome of user testing.
-                        </li>
-                        <li>
-                            <strong>Limited interactivity</strong>
-
-                            It’s impossible to convey complex animations or transitions using this type of
-                            prototype.
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-
+            </tr>
+            <tr>
+              <td>More accurate for user testing</td>
+              <td>Iteration takes time and effort</td>
+            </tr>
+            <tr>
+              <td>Delivers design requirements for dev</td>
+              <td>Polished work discourages feedback</td>
+            </tr>
+          </table>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <h1 class="newsletter__title">Keep up to date</h1>
+    <form action="#" method="post" class="newsletter__form">
+      <label for="name">Full name</label>
+      <input type="text" name="name" id="name" />
+
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" />
+
+      <label for="number">Phone number</label>
+      <input type="number" name="number" id="number" />
+
+      <button type="submit">Subscribe</button>
+    </form>
+
+  </section>
 
 </body>
 
-<footer class="footer">
-    <div>
-        <h3>Support</h3>
-        <li><a href="#" target="_blank">Help</a></li>
-        <li><a href="#" target="_blank">Report a page issue</a></li>
-        <li><a href="#" target="_blank">Report a site issue</a></li>
-    </div>
-    <div class="footer__social">
-        <h3>Contacts</h3>
-        <ul>
-            <li><a href="http://www.facebook.com" target="_blank">Facebook</a></li>
-            <li><a href="http://www.twitter.com" target="_blank">Twitter</a></li>
-            <li><a href="http://www.instagram.com" target="_blank">Instagram</a></li>
-            <li><a href="http://www.github.com" target="_blank">Github</a></li>
-        </ul>
-    </div>
+<footer class="footer" id="footer">
+  <div class="footer__social">
+    <h3>Contacts</h3>
+    <ul>
+      <li><a href="http://www.facebook.com" target="_blank">Facebook</a></li>
+      <li><a href="http://www.twitter.com">Twitter</a></li>
+      <li><a href="http://www.instagram.com" target="_blank">Instagram</a></li>
+      <li><a href="http://www.github.com">Github</a></li>
+    </ul>
+  </div>
+  <div class="footer__support">
+    <h3>Support</h3>
+    <li><a href="#" target="_blank">Help</a></li>
+    <li><a href="#" target="_blank">Report a page issue</a></li>
+    <li><a href="#" target="_blank">Report a site issue</a></li>
+  </div>
+  <div class="footer__copyright">
+    <h3>copyright &copy; 2022 All rights reserved</h3>
+    <ul>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Terms of Use</a></li>
+    </ul>
+  </div>
+  <div class="footer__gototop"><a href="#header"><img src="https://www.pngmagic.com/product_images/up-arrow-png.png"
+        alt="up arrow" width="70" height="50"></a></div>
 </footer>
 
 </html>
