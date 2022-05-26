@@ -1,0 +1,17 @@
+.assignments {
+    display: block;
+}
+
+.assignments__table {
+    min-width: 1200px;
+    margin: auto;
+}
+
+td {
+    text-align: center;
+    padding: 20px;
+}
+
+.assignments__table__submission a {
+    margin-right: 8px;
+}
