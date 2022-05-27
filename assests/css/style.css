@@ -8,9 +8,8 @@ body {
     background-color: #f5f9fa;
     font-size: 18px;
     font-family: 'Lato', sans-serif;
-}
-
-main {
+    width: 1200px;
+    margin: auto;
     margin-top: 50px;
 }
 
@@ -19,7 +18,7 @@ a, a:focus, a:hover {
     color: black;
 }
 
-.button {
+.btn {
     padding: 6px 20px;
     border-radius: 100px;
     background-color: blue;
@@ -28,8 +27,13 @@ a, a:focus, a:hover {
     color: white;
 }
 
-.button:hover {
+.btn:hover {
     color: white;
+}
+
+.btn__icon {
+    vertical-align: middle;
+    margin-right: 3px;
 }
 
 .disabled {
@@ -38,12 +42,28 @@ a, a:focus, a:hover {
     background-color: gray;
 }
 
-.assignments {
-    display: block;
+.info {
+    margin-bottom: 20px;
+
+}
+
+.info div {
+    font-size: 20px;
+    margin-bottom: 2px 0 0 2px;
+
+}
+
+main {
+    min-width: 1200px;
+}
+
+.assignments > h2 {
+    display: inline-block;
+    margin: auto;
 }
 
 .assignments__table {
-    min-width: 1200px;
+    width: 100%;
     margin: auto;
     border-collapse: collapse;
 }
