@@ -53,9 +53,13 @@ a, a:focus, a:hover {
 }
 
 .info div {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 2px 0 0 2px;
 
+}
+
+.info__title {
+    margin-bottom: 4px;
 }
 
 main {
@@ -77,15 +81,23 @@ main {
     color: #757779;
 }
 
-.assignments__table tbody tr {
+.assignments__table__row {
     background-color: #ffffff;
+}
+
+.assignments__table__sep {
+    background-color: #f5f9fa ;
 }
 
 
 .assignments__table th,
 .assignments__table td {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
+}
+
+.assignments__table__sep td {
+    padding: 15px;
 }
 
 .assignments__table td:first-child {
