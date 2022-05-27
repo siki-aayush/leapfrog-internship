@@ -1,3 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f9fa;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+}
+
+main {
+    margin-top: 50px;
+}
+
+a, a:focus, a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.button {
+    padding: 6px 20px;
+    border-radius: 100px;
+    background-color: blue;
+    border: none;
+    margin-right: 20px;
+    color: white;
+}
+
 .assignments {
     display: block;
 }
@@ -5,13 +35,30 @@
 .assignments__table {
     min-width: 1200px;
     margin: auto;
+    border-collapse: collapse;
 }
 
-td {
+.assignments__table thead {
+    color: #757779;
+}
+
+.assignments__table tbody tr {
+    background-color: #ffffff;
+}
+
+
+.assignments__table th,
+.assignments__table td {
     text-align: center;
     padding: 20px;
 }
 
-.assignments__table__submission a {
-    margin-right: 8px;
+.assignments__table td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.assignments__table td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
