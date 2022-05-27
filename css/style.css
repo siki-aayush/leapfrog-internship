@@ -28,6 +28,16 @@ a, a:focus, a:hover {
     color: white;
 }
 
+.button:hover {
+    color: white;
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: default;
+    background-color: gray;
+}
+
 .assignments {
     display: block;
 }
