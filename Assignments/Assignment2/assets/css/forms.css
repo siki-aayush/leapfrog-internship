@@ -1,0 +1,130 @@
+/* Forms */
+
+.form {
+    overflow: hidden;
+}
+
+.form > div {
+    float: left;
+    margin-bottom: 50px;
+}
+
+.form__left {
+    width: 40%;
+    padding-right: 80px;
+}
+
+.table-group {
+    border: 1px solid var(--secondary-light);
+    border-radius: 5px;
+}
+
+.table-group li {
+    padding: 15px;
+    border-bottom: 1px solid var(--secondary-light);
+    list-style-type: none;
+    color: var(--gray-900);
+    font-size: var(--medium);
+}
+
+.table-group li:last-child {
+    border-bottom: 0;
+}
+
+/*.form__left .form__left__highlight {*/
+.table-group .highlight {
+    background-color: var(--primay);
+    color: white;
+}
+
+.form__right__el {
+    margin-bottom: 60px;
+}
+
+.form__right__el input[type="text"],
+.form__right__el textarea,
+.form__right__el select {
+    width: 450px;
+    padding: 8px 15px;
+    border: 1px solid var(--secondary-light);
+    border-radius: 5px;
+    font-size: var(--small);
+    background-color: white;
+    color: var(--gray-600);
+}
+
+.form__right__el option:first-child {
+    color: var(--secondary-light);
+}
+
+.form__right__el textarea {
+    height: 100px;
+}
+
+.form__right__el.checkboxes > div,
+.form__right__el.radios > div {
+    float: left;
+}
+
+.checkboxes,
+.radios {
+    overflow: hidden;
+}
+
+.checkboxes__block input,
+.radio__block input {
+    color: var(--primary-dark);
+}
+
+.checkboxes__block,
+.radio__block {
+    margin-right: 60px;
+}
+
+.checkboxes__block div,
+.checkboxes__inline label,
+.radio__block div,
+.radio__inline label {
+    margin-bottom: 8px;
+    font-size: var(--x-small);
+}
+
+.checkboxes__block__header,
+.checkboxes__inline__header,
+.radio__block__header,
+.radio__inline_header {
+    margin-bottom: 15px;
+    color: var(--gray-900);
+}
+
+.checkboxes__inline input,
+.radio__inline input {
+    margin-right: 3px;
+}
+
+.checkboxes__inline label,
+.radio__inline label {
+    margin-right: 10px;
+}
+
+/* Validation */
+
+.validation label {
+    display: block;
+    color: var(--gray-900);
+    font-size: var(--small);
+    margin-bottom: 5px;
+}
+
+.validation input {
+    margin-bottom: 20px;
+}
+
+.validation .validation__success input {
+    border: 1px solid var(--success);
+}
+
+.validation .validation__error input {
+    border: 1px solid var(--danger);
+}
+

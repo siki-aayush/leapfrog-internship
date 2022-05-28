@@ -1,0 +1,36 @@
+/* List Groups */
+.list-groups__left {
+    float: left;
+    width: 30%;
+}
+
+.list-groups__right {
+    float: right;
+    width: 35%;
+}
+
+.table-group.custom li {
+    font-size: var(--small);
+}
+
+.table-group__heading {
+    width: 80%;
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.table-group__days {
+    float: right;
+    font-weight: bold;
+    font-size: var(--x-small);
+}
+
+.table-group__desc {
+    margin-bottom: 15px;
+}
+
+.table-group__footer {
+    font-size: var(--x-small);
+}
+

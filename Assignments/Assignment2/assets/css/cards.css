@@ -1,0 +1,177 @@
+/* Cards */
+
+/* First Card */
+.card {
+    width: 380px;
+    height: 600px;
+    overflow: hidden;
+    border: 1px solid var(--gray-border);
+    border-radius: 8px;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.card-first hr {
+    border-top: 1px solid var(--gray-border);
+    width: 98%;
+    margin: 10px auto;
+}
+
+.card-first__header {
+    width: 100%;
+    padding: 20px;
+}
+
+.card-first__header img,
+.card-first__header div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.card-first__header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.icon-dots {
+    float: right;
+}
+
+.card-first__image {
+    height: 390px;
+}
+
+.card-first__icons {
+    width: 90%;
+    overflow: hidden;
+    margin: auto;
+    padding: 6px 0;
+}
+
+.card-first__icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.icon-like {
+    float: left;
+}
+
+.icon-comment {
+    margin-left: 140px;
+    float: left;
+}
+
+.icon-share {
+    float: right;
+}
+
+.card-first__footer {
+    width: 85%;
+    margin: 15px auto;
+}
+.card-first__footer img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+.card-first__footer input {
+    width: 260px;
+    padding: 8px;
+    border-radius: 30px;
+    border: 1px solid var(--gray-border);
+}
+
+/* Card Second */
+
+.card-second__image {
+    position: relative;
+    background-image: url("../images/background2.jpg");
+    width: 100%;
+    height: 360px;
+    background-size: cover;
+}
+
+.card-second__play {
+    width: 70px;
+    height: 70px;
+    background-color: var(--success);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -30px;
+    left: 40%;
+    z-index: 10;
+}
+
+.card-second__play img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translateY(-50%);
+}
+
+.card-second__footer {
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
+    color: var(--gray-900);
+    font-size: var(--medium);
+    padding: 20px;
+}
+
+/* Card Third */
+
+.card-third {
+    font-size: var(--small);
+}
+
+.card-third__header {
+    padding: 15px;
+}
+
+.card-third__header .desc {
+    color: var(--gray-900);
+}
+
+.card-third__image {
+    height: 400px;
+    background-size: cover;
+}
+
+.card-third__footer {
+    width: 90%;
+    margin: 20px auto;
+    vertical-align: middle;
+}
+
+.icon-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.card-third__footer div {
+    display: inline;
+    margin-right: 40px;
+}
+
+.card-third__footer .comment,
+.card-third__footer .heart {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.card-third__footer span {
+    margin-right: 12px;
+}

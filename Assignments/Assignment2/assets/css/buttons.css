@@ -1,0 +1,31 @@
+/* Buttons */
+.btn-table {
+    margin-bottom: 70px;
+}
+
+.btn-table__body .btn {
+    padding: 11px 22px;
+    color: white;
+}
+
+.btn-table__body .btn.primary-outline {
+    color: var(--primay);
+}
+.btn-table__body .btn.secondary-outline {
+    color: var(--secondary);
+}
+
+.btn-table__head th,
+.btn-table__body td {
+    padding: 15px;
+    text-align: left;
+}
+
+.btn-table__body td:first-child {
+    padding-right: 70px;
+}
+
+.btn-table__body td:nth-child(2),
+.btn-table__body th:nth-child(2) {
+    padding-right: 170px;
+}
