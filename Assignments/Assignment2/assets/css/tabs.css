@@ -14,8 +14,13 @@
     border-bottom: 1px solid white;
 }
 
+.tabs__profile {
+    color: var(--primary);
+}
+
 .tabs__contact {
     border-right: 1px solid var(--secondary-light);
+    color: var(--primary);
 }
 
 .tabs__content {

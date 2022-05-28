@@ -9,7 +9,7 @@
 }
 
 .btn-table__body .btn.primary-outline {
-    color: var(--primay);
+    color: var(--primary);
 }
 .btn-table__body .btn.secondary-outline {
     color: var(--secondary);

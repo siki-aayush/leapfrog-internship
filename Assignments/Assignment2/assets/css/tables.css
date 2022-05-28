@@ -37,7 +37,7 @@
 
 .pages span {
     border: 1px solid var(--gray-border);
-    color: var(--primay);
+    color: var(--primary);
     padding: 5px 10px;
     margin-right: 3px;
     border-radius: 6px;
@@ -52,6 +52,6 @@
 }
 
 .pages .pages__current {
-    background-color: var(--primay);
+    background-color: var(--primary);
     color: white;
 }

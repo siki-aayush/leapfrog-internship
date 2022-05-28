@@ -1,6 +1,6 @@
 :root {
     /* Primary colors */
-    --primay: #7749f8;
+    --primary: #7749f8;
     --primary-dark: #5227cc;
     --primary-light: #ebe5fc;
 
@@ -100,7 +100,7 @@ section {
 
 
 .primary {
-    background-color: var(--primay);
+    background-color: var(--primary);
 }
 
 .primary-dark {
@@ -112,8 +112,8 @@ section {
 }
 
 .primary-outline {
-    border: 1px solid var(--primay);
-    color: var(--primay);
+    border: 1px solid var(--primary);
+    color: var(--primary);
     background-color: white;
 }
 
@@ -131,7 +131,7 @@ section {
 
 .secondary-outline {
     border: 1px solid var(--secondary);
-    color: var(--primay);
+    color: var(--primary);
     background-color: white;
 }
 
