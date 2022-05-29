@@ -35,7 +35,6 @@
     --small: 16px;
     --medium: 18px;
     --large: 24px;
-
 }
 
 * {
@@ -44,11 +43,10 @@
     box-sizing: border-box;
 }
 
-
 body {
     background-color: var(--background);
     font-size: 18px;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     height: 100vh;
     color: var(--secondary-dark);
 }
@@ -59,7 +57,9 @@ body {
     padding-top: 60px;
 }
 
-a, a:focus, a:hover {
+a,
+a:focus,
+a:hover {
     text-decoration: none;
 }
 
@@ -90,14 +90,8 @@ a, a:focus, a:hover {
 }
 
 .info {
-    margin-bottom: 20px;
-
-}
-
-.info div {
     font-size: var(--large);
-    margin-bottom: 2px 0 0 2px;
-
+    margin-bottom: 20px;
 }
 
 .info__title {
@@ -124,7 +118,6 @@ main {
 .assignments__table thead {
     color: var(--secondary);
 }
-
 
 .assignments__table th {
     text-align: center;

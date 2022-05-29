@@ -1,119 +1,146 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Index</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="./assests/css/style.css"
+            type="text/css"
+            media="all"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assests/css/style.css" type="text/css" media="all">
-</head>
-
-<body>
-    <div class="container">
-
-        <div class="info">
-            <div>
+    <body>
+        <div class="container">
+            <div class="info">
                 <h2 class="info__title">Aayush Musyaju</h2>
-                <div class="info__group">
-                    Group: B
-                </div>
-                <div class="info__roll">
-                    Roll No: 7
-                </div>
+                <div class="info__group">Group: B</div>
+                <div class="info__roll">Roll No: 7</div>
             </div>
+
+            <main class="assignments">
+                <table class="assignments__table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Submission</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="assignments__table__row">
+                            <td class="assignments__table__idx">1</td>
+                            <td class="assignments__table__title">
+                                Assignment1: HTML skeleton
+                            </td>
+                            <td class="assignments__table__submission">
+                                <a
+                                    href="https://siki-aayush.github.io/leapfrog-internship/Assignments/Assignment1/blog_lofi/"
+                                    target="_blank"
+                                    class="btn btn-demo"
+                                >
+                                    <span class="btn__icon">
+                                        <img
+                                            src="./assests/images/icons/pc.svg"
+                                            alt="pc icon"
+                                        />
+                                    </span>
+                                    Demo
+                                </a>
+                                <a
+                                    href="https://github.com/siki-aayush/leapfrog-internship/tree/main/Assignments/Assignment1/blog_lofi"
+                                    target="_blank"
+                                    class="btn btn-code"
+                                >
+                                    <span class="btn__icon">
+                                        <img
+                                            src="./assests/images/icons/code.svg"
+                                            alt="code icon"
+                                        />
+                                    </span>
+                                    Code
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr class="assignments__table__row">
+                            <td class="assignments__table__idx">2</td>
+                            <td class="assignments__table__title">
+                                Assignment1: Lofi Desgin
+                            </td>
+
+                            <td class="assignments__table__submission">
+                                <a href="#" class="btn btn-demo disabled">
+                                    <span class="btn__icon">
+                                        <img
+                                            src="./assests/images/icons/pc.svg"
+                                            alt="pc icon"
+                                        />
+                                    </span>
+                                    Demo
+                                </a>
+                                <a
+                                    href="https://github.com/siki-aayush/leapfrog-internship/tree/main/Assignments/Assignment1"
+                                    target="_blank"
+                                    class="btn btn-code"
+                                >
+                                    <span class="btn__icon">
+                                        <img
+                                            src="./assests/images/icons/code.svg"
+                                            alt="code icon"
+                                        />
+                                    </span>
+                                    Code
+                                </a>
+                            </td>
+                        </tr>
+
+                        <tr class="assignments__table__row">
+                            <td class="assignments__table__idx">3</td>
+                            <td class="assignments__table__title">
+                                Assignment2: CSS Desgin
+                            </td>
+
+                            <td class="assignments__table__submission">
+                                <a
+                                    href="https://siki-aayush.github.io/leapfrog-internship/Assignments/Assignment2/"
+                                    target="_blank"
+                                    class="btn btn-demo"
+                                >
+                                    <span class="btn__icon">
+                                        <img
+                                            src="./assests/images/icons/pc.svg"
+                                            alt="pc icon"
+                                        />
+                                    </span>
+                                    Demo
+                                </a>
+                                <a
+                                    href="https://github.com/siki-aayush/leapfrog-internship/tree/main/Assignments/Assignment2"
+                                    target="_blank"
+                                    class="btn btn-code"
+                                >
+                                    <span class="btn__icon">
+                                        <img
+                                            src="./assests/images/icons/code.svg"
+                                            alt="code icon"
+                                        />
+                                    </span>
+                                    Code
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </main>
         </div>
-
-        <main class="assignments">
-            <table class="assignments__table">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Title</th>
-                        <th>Submission</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="assignments__table__row">
-                        <td class="assignments__table__idx">1</td>
-                        <td class="assignments__table__title">Assignment1: HTML skeleton</td>
-                        <td class="assignments__table__submission">
-
-                            <a href="https://siki-aayush.github.io/leapfrog-internship/Assignments/Assignment1/blog_lofi/"
-                                target="_blank" class="btn btn-demo">
-                                <span class="btn__icon">
-                                    <img src="./assests/images/icons/pc.svg" alt="pc icon">
-                                </span>
-                                Demo
-                            </a>
-                            <a href="https://github.com/siki-aayush/leapfrog-internship/tree/main/Assignments/Assignment1/blog_lofi"
-                                target="_blank" class="btn btn-code">
-                                <span class="btn__icon">
-                                    <img src="./assests/images/icons/code.svg" alt="code icon">
-                                </span>
-                                Code
-                            </a>
-
-                        </td>
-                    </tr>
-                    <!--<tr class="assignments__table__sep">-->
-                    <!--    <td></td>-->
-                    <!--</tr>-->
-                    <tr class="assignments__table__row">
-                        <td class="assignments__table__idx">2</td>
-                        <td class="assignments__table__title">Assignment1: Lofi Desgin</td>
-
-                        <td class="assignments__table__submission">
-                            <a href="#" class="btn btn-demo disabled">
-                                <span class="btn__icon">
-                                    <img src="./assests/images/icons/pc.svg" alt="pc icon">
-                                </span>
-                                Demo
-                            </a>
-                            <a href="https://github.com/siki-aayush/leapfrog-internship/tree/main/Assignments/Assignment1"
-                                target="_blank" class="btn btn-code">
-                                <span class="btn__icon">
-                                    <img src="./assests/images/icons/code.svg" alt="code icon">
-                                </span>
-                                Code
-                            </a>
-
-                        </td>
-                    </tr>
-
-                    <!--<tr class="assignments__table__sep">-->
-                    <!--    <td></td>-->
-                    <!--</tr>-->
-
-                    <tr class="assignments__table__row">
-                        <td class="assignments__table__idx">3</td>
-                        <td class="assignments__table__title">Assignment2: CSS Desgin</td>
-
-                        <td class="assignments__table__submission">
-                            <a href="https://siki-aayush.github.io/leapfrog-internship/Assignments/Assignment2/" target="_blank" class="btn btn-demo">
-                                <span class="btn__icon">
-                                    <img src="./assests/images/icons/pc.svg" alt="pc icon">
-                                </span>
-                                Demo
-                            </a>
-                            <a href="https://github.com/siki-aayush/leapfrog-internship/tree/main/Assignments/Assignment2"
-                                target="_blank" class="btn btn-code">
-                                <span class="btn__icon">
-                                    <img src="./assests/images/icons/code.svg" alt="code icon">
-                                </span>
-                                Code
-                            </a>
-
-                        </td>
-                    </tr>
-
-                </tbody>
-            </table>
-
-        </main>
-    </div>
-</body>
-
+    </body>
 </html>
