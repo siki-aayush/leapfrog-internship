@@ -1,0 +1,55 @@
+.card {
+    width: 380px;
+    height: 600px;
+    overflow: hidden;
+    border: 1px solid var(--gray-border);
+    border-radius: 8px;
+}
+
+.card-third {
+    font-size: var(--small);
+}
+
+.card-third__header {
+    padding: 15px;
+}
+
+.card-third__header .desc {
+    color: var(--gray-900);
+}
+
+.card-third__image {
+    height: 400px;
+    background-size: cover;
+}
+
+.card-third__footer {
+    width: 90%;
+    margin: 20px auto;
+    vertical-align: middle;
+}
+
+.icon-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.card-third__footer div {
+    display: inline;
+    margin-right: 40px;
+}
+
+.card-third__footer .comment,
+.card-third__footer .heart {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.card-third__footer span {
+    margin-right: 12px;
+}

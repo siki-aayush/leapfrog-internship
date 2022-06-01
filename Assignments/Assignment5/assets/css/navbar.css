@@ -1,0 +1,54 @@
+.navbar {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    background-color: var(--gray-bg);
+    margin-bottom: 30px;
+}
+
+.navbar a {
+    color: var(--secondary-dark);
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar li {
+    float: left;
+    margin-right: 18px;
+    line-height: 90px;
+}
+
+.navbar__left {
+    float: left;
+}
+
+.navbar__logo a {
+    font-weight: bold;
+    margin-right: 70px;
+    font-size: 25px;
+    color: var(--gray-900);
+}
+
+.navbar__right {
+    float: right;
+}
+
+.navbar__right input {
+    border-radius: 6px;
+    border: 1px solid #abb5be78;
+    padding: 13px;
+}
+
+.navbar__right .navbar__right__input {
+    margin-right: 5px;
+}
+
+.navbar__right__btn button {
+    border-radius: 6px;
+    padding: 13px 18px;
+    border: 1px solid var(--success);
+    color: var(--success);
+}
+

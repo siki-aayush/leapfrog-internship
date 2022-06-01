@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Forms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/global.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="./assets/css/navbar.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="./assets/css/forms.css" type="text/css" media="all" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <ul class="navbar__left">
+                    <li class="navbar__logo"><a>UI Kit</a></li>
+                    <li><a href="./index.html">Color</a></li>
+                    <li><a href="./typography.html">Typography</a></li>
+                    <li><a href="./tabs.html">Tabs</a></li>
+                    <li><a href="./buttons.html">Buttons</a></li>
+                    <li><a href="./forms.html">Forms</a></li>
+                    <li><a href="./listgroups.html">List Group</a></li>
+                    <li><a href="./tables.html">Table</a></li>
+                    <li><a href="./card1.html">Card1</a></li>
+                    <li><a href="./card2.html">Card2</a></li>
+                    <li><a href="./card3.html">Card3</a></li>
+                </ul>
+                <ul class="navbar__right">
+                    <li class="navbar__right__input">
+                        <input type="text" placeholder="Search" />
+                    </li>
+                    <li class="navbar__right__btn">
+                        <button>Search</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container" id="form-ref">
+        <h1>Forms</h1>
+        <hr />
+        <div class="form">
+            <div class="form__left">
+                <h3>Components</h3>
+                <ul class="table-group">
+                    <li>Color</li>
+                    <li>Typography</li>
+                    <li class="highlight">Forms</li>
+                    <li>List Group</li>
+                    <li>Table</li>
+                    <li>Card</li>
+                </ul>
+            </div>
+
+            <div class="form__right">
+                <div class="form__right__el">
+                    <h3>Input</h3>
+                    <input type="text" name="name" placeholder="Placeholder" />
+                </div>
+
+                <div class="form__right__el">
+                    <h3>Selected menu</h3>
+
+                    <select name="menus" id="menus">
+                        <option value="Select Menu">Select Menu</option>
+                        <option value="menu1">Menu1</option>
+                        <option value="menu2">Menu2</option>
+                        <option value="menu3">Menu3</option>
+                    </select>
+                </div>
+
+                <div class="form__right__el">
+                    <h3>Textarea</h3>
+                    <textarea name="form_text" id="form_text" placeholder="Write your message here"></textarea>
+                </div>
+
+                <div class="form__right__el checkboxes">
+                    <h3>Checkboxes</h3>
+
+                    <div class="checkboxes__block">
+                        <p class="checkboxes__block__header">Checkboxes</p>
+
+                        <label class="checkbox">
+                            Default checkbox
+                            <input type="checkbox" />
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="checkbox">
+                            Selected checkbox
+                            <input type="checkbox" checked />
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="checkbox disabled">
+                            Default checkbox
+                            <input type="checkbox" disabled />
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="checkboxes__inline">
+                        <p class="checkboxes__inline__header">
+                            Checkboxes Inline
+                        </p>
+
+                        <label class="checkbox">
+                            Default checkbox
+                            <input type="checkbox" />
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="checkbox">
+                            Selected checkbox
+                            <input type="checkbox" checked />
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="checkbox disabled">
+                            Default checkbox
+                            <input type="checkbox" disabled />
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form__right__el radios">
+                    <h3>Radios</h3>
+                    <div class="radio__block">
+                        <p class="radio__block__header">Radios</p>
+
+                        <label class="checkbox radio">
+                            Default checkbox
+                            <input type="radio" />
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="checkbox radio">
+                            Selected checkbox
+                            <input type="radio" checked />
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="checkbox radio disabled">
+                            Disabled checkbox
+                            <input type="radio" disabled />
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="radio__inline">
+                        <p class="radio__inline__header">Radios Inline</p>
+
+                        <label class="checkbox radio">
+                            Default checkbox
+                            <input type="radio" />
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="checkbox radio">
+                            Selected checkbox
+                            <input type="radio" checked />
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="checkbox radio disabled">
+                            Disabled checkbox
+                            <input type="radio" disabled />
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form__right__el validation">
+                    <h3>Validation</h3>
+
+                    <div class="validation__success">
+                        <label for="success_input">Input Success</label>
+                        <input type="text" name="success" id="success_input" />
+                    </div>
+                    <div class="validation__error">
+                        <label for="error_input">Input Error</label>
+                        <input type="text" name="error" id="error_input" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

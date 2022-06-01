@@ -1,0 +1,13 @@
+Component   Estimated   Done
+Navbar      15 min      12 min
+Colors      5 min       4 min
+Typography  15 min      10 min
+Buttons     5 min       6 min
+Forms       30 min      40 min
+List groups 15 min      12 min
+Table       5 min       6 min
+Card1       10 min      10 min
+Card2       10 min       9 min
+Card3       10 min      9 min
+
+

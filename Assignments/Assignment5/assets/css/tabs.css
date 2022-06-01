@@ -1,0 +1,30 @@
+.tabs .btn {
+    float: left;
+    border-left: 1px solid var(--secondary-light);
+    border-top: 1px solid var(--secondary-light);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: white;
+}
+
+.tabs .btn.tabs__home {
+    margin-bottom: -1px;
+    border-bottom: 1px solid white;
+}
+
+.tabs__profile {
+    color: var(--primary);
+}
+
+.tabs__contact {
+    border-right: 1px solid var(--secondary-light);
+    color: var(--primary);
+}
+
+.tabs__content {
+    width: 50%;
+    clear: left;
+    font-size: var(--medium);
+    border-top: 1px solid var(--secondary-light);
+    padding-top: 20px;
+}

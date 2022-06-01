@@ -1,0 +1,43 @@
+.typography {
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+
+.typography__el {
+    width: 50%;
+    float: left;
+}
+
+.typography__el.body-text {
+    padding-right: 100px;
+}
+
+.typography__el li {
+    list-style-type: none;
+    margin-bottom: 13px;
+    font-size: var(--small);
+}
+
+.typography__el .cut {
+    text-decoration: line-through;
+}
+
+.typography__el .underline {
+    text-decoration: underline;
+}
+
+.typography__el .small {
+    font-size: var(--x-small);
+}
+
+.typography__el .bold {
+    font-weight: bold;
+}
+
+.typography__el .italic {
+    font-style: italic;
+}
+
+.lead-text p {
+    font-size: var(--large);
+}
