@@ -20,13 +20,8 @@
     color: white;
 }
 
-.list-groups__left {
-    float: left;
-    width: 30%;
-}
-
 .list-groups__right {
-    float: right;
+    float: left;
     width: 35%;
 }
 
