@@ -43,7 +43,6 @@ a:focus,
 a:hover,
 a:link {
     text-decoration: none;
-    color: var(--gray);
 }
 
 h1 {
