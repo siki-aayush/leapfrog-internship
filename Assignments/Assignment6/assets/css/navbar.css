@@ -1,0 +1,63 @@
+/* Navbar */
+
+.navbar {
+    overflow: hidden;
+    padding-top: 56px;
+    margin-bottom: 50px;
+}
+
+.nav__logo {
+    float: left;
+}
+
+.nav__links {
+    overflow: hidden;
+}
+
+.nav__links li {
+    float: right;
+    margin-right: 40px;
+    margin-top: 8px;
+    opacity: 0.5;
+    transition: 300ms ease;
+}
+
+.nav__links li:hover {
+    opacity: 1;
+}
+
+.hamburger {
+    display: none;
+}
+
+@media all and (max-width: 576px) {
+    .navbar {
+        padding-top: 30px;
+    }
+
+    .hamburger {
+        display: block;
+        float: right;
+        width: 24px;
+        height: 24px;
+        margin-top: 10px;
+    }
+
+    .nav__links {
+        clear: left;
+        float: none;
+        margin-top: 60%;
+        /*display: none;*/
+    }
+
+    .nav__links li {
+        float: none;
+        text-align: center;
+        margin: 0;
+        margin-bottom: 48px;
+    }
+
+    .nav__disp {
+        display: none;
+    }
+}

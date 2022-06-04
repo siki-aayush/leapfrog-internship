@@ -1,0 +1,95 @@
+/* Mobile apps */
+.mobile {
+    overflow: hidden;
+    margin-bottom: 250px;
+    margin-right: 0;
+    position: relative;
+    padding-top: 230px;
+}
+
+.mobile > img {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.mobile > div {
+    width: 90%;
+    float: left;
+    overflow: hidden;
+}
+
+.mobile__content {
+    width: 50%;
+    float: left;
+}
+
+.mobile__right {
+    width: 50%;
+    float: right;
+}
+
+.mobile__content {
+    max-width: 420px;
+}
+
+.mobile__content h2 {
+    max-width: 254px;
+}
+
+.mobile__content p {
+    max-width: 420px;
+    margin-bottom: 40px;
+    opacity: 0.5;
+    color: #7d7987;
+    max-width: 85%;
+}
+
+.mobile__right img {
+    width: 100%;
+}
+
+@media all and (max-width: 1200px) {
+    .mobile {
+        width: 100%;
+    }
+
+    .mobile > div {
+        width: 90%;
+        margin: auto;
+        float: none;
+    }
+}
+
+@media all and (max-width: 576px) {
+    .mobile {
+        width: auto;
+        margin-right: 20px;
+        padding-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .mobile > div {
+        width: 100%;
+        float: none;
+    }
+
+    .mobile__content {
+        width: 100%;
+        float: none;
+    }
+
+    .mobile__right {
+        width: 100%;
+        float: none;
+        margin-bottom: 25px;
+    }
+
+    .mobile__content h2 {
+        max-width: 100%;
+    }
+
+    .mobile__content p {
+        margin-bottom: 20px;
+    }
+}

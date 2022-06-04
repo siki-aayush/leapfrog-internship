@@ -1,0 +1,86 @@
+/* Hero */
+
+.hero {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 190px;
+}
+
+.hero > img {
+    position: absolute;
+}
+
+.hero__content {
+    padding: 120px 0;
+    max-width: 445px;
+    /*max-width: 445px;*/
+}
+
+.hero__content h1 {
+    margin-bottom: 25px;
+}
+
+.hero__content p {
+    font-size: var(--large);
+    opacity: 0.5;
+    line-height: 32px;
+    margin-bottom: 45px;
+}
+
+.hero__left {
+    float: left;
+    width: 50%;
+    margin: auto;
+}
+
+.hero__right {
+    float: right;
+    width: 50%;
+}
+
+.hero__right img {
+    width: 100%;
+}
+
+@media all and (max-width: 1200px) {
+    .hero {
+        margin-bottom: 80px;
+    }
+}
+
+@media all and (max-width: 576px) {
+    .hero {
+        margin-bottom: 65px;
+    }
+
+    .hero__content {
+        padding: 0;
+    }
+
+    .hero__content h1 {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .hero__content p {
+        font-size: 14px;
+        margin-bottom: 20px;
+        line-height: 18px;
+        text-align: center;
+    }
+
+    .hero__left {
+        float: none;
+        width: 90%;
+    }
+
+    .hero__right {
+        float: none;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero__content > div {
+        text-align: center;
+    }
+}

@@ -1,0 +1,173 @@
+:root {
+    /* Colors */
+    --primary: #458FF6;
+    --primary-dark: #1B6CDD;
+    --gray: #1F1534;
+    --text-color: #7D7987;
+
+    /* Font sizes */
+    --x-small: 12px;
+    --small: 16px;
+    --medium: 18px;
+    --large: 21px;
+
+    /* Header sizes */
+    --primary-header: 48px;
+    --secondary-header: 36px;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    font-family: 'Mulish', sans-serif;
+    font-size: var(--medium);
+    font-weight: 400;
+    color: var(--text-color);
+    max-width: 1600px;
+    margin: auto;
+    z-index: 1;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a,
+a:focus,
+a:hover,
+a:link {
+    text-decoration: none;
+    color: var(--gray);
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    color: black;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 56px;
+    color: black;
+}
+
+h3 {
+    color: black;
+}
+
+.container {
+    max-width: 1260px;
+    margin: auto;
+    /*max-width: 75%;*/
+}
+
+.btn {
+    padding: 18px 51px;
+    color: var(--primary);
+    border: 1.4px solid var(--primary);
+    font-weight: 700;
+    border-radius: 55px;
+    display: inline-block;
+    transition: 300ms ease;
+}
+
+.btn span {
+    margin-left: 14px;
+}
+
+.btn:hover {
+    background-color: var(--primary);
+    color: white;
+
+}
+
+.btn--primary {
+    border: 0;
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn--primary:hover {
+    background-color: var(--primary-dark);
+
+}
+
+.col-3 {
+    width: calc(100%/3);
+    float: left;
+}
+
+.line::after {
+    content: "";
+    width: 56px;
+    height: 2px;
+    background-color: black;
+    border-radius: 5px;
+    display: block;
+    margin-top: 26px;
+    margin-bottom: 31px;
+}
+
+
+@media all and (max-width: 1200px) {
+    .container {
+        width: 85%;
+        margin: auto;
+    }
+
+    h2 {
+        line-height: 46px;
+    }
+
+    .btn {
+        padding: 14px 40px;
+    }
+}
+
+
+@media all and (max-width: 576px) { 
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        width: auto;
+        margin: 0 20px;
+    } 
+
+    .square {
+        display: none;
+    }
+
+    h1 {
+        font-size: var(--secondary-header);
+        line-height: 38px;
+    }
+
+    h2 {
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    .btn {
+        padding: 12px 25px;
+    }
+
+    .line::after {
+        margin-top: 16px;
+        margin-bottom: 21px;
+    }
+
+
+}
+
+
