@@ -14,13 +14,16 @@
     overflow: hidden;
 }
 
-.nav__links a{
+.nav__links li {
     float: right;
     margin-right: 40px;
     margin-top: 8px;
-    color: var(--gray);
     opacity: 0.5;
     transition: 300ms ease;
+}
+.nav__links a {
+    color: var(--gray);
+
 }
 
 .nav__links li:hover {
@@ -48,7 +51,6 @@
         clear: left;
         float: none;
         margin-top: 60%;
-        /*display: none;*/
     }
 
     .nav__links li {
