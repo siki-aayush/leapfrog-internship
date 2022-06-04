@@ -3,8 +3,6 @@ const hamImg = hamBtn.getElementsByTagName("img")[0];
 const rightNav = document.querySelector(".nav__links");
 const main = document.querySelector("main");
 const footer = document.querySelector("footer");
-console.log("hamImg", hamImg)
-console.log("hamImg", hamBtn)
 
 function toggle(event) {
     console.log("testing");

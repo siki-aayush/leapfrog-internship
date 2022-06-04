@@ -14,10 +14,11 @@
     overflow: hidden;
 }
 
-.nav__links li {
+.nav__links a{
     float: right;
     margin-right: 40px;
     margin-top: 8px;
+    color: var(--gray);
     opacity: 0.5;
     transition: 300ms ease;
 }
