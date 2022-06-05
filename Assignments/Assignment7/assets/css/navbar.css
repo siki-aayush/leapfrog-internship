@@ -22,12 +22,12 @@
     .navbar__links {
         position: absolute;
         width: 100%;
-        top: -900px;
+        top: -800px;
         left: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
-        transition: all 300ms ease-in-out;
+        transition: all 400ms ease;
     }
 
     .navbar__link {
@@ -44,7 +44,7 @@
 
 
     .active {
-        top: 110px;
+        top: 210px;
     }
 
     .navbar .btn {

@@ -191,9 +191,11 @@ a:link {
         margin-right: 30px;
 
     }
-}
 
-@media all and (in-width: 577px) {
+    main {
+        transition: 300ms ease;
+    }
+
 }
 
 @media all and (min-width: 577px) {
