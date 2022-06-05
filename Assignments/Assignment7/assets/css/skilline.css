@@ -1,0 +1,82 @@
+@media screen and (min-width: 70px) {
+    .skilline {
+        text-align: justify;
+        margin-bottom: 90px;
+    }
+
+    .skilline h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .skilline p {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 50px;
+        text-align-last: center;
+    }
+
+    .skilline__card {
+        position: relative;
+        margin-bottom: 20px;
+
+    }
+
+    .skilline__card img {
+       width: 100%; 
+    }
+
+    .skilline__card__info {
+        position: absolute;
+        color: white;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+    }
+
+    .skilline__card__info .title {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 48px;
+        margin-bottom: 4px;
+    }
+
+
+    .skilline .btn {
+        opacity: 0.9;
+        padding: 13px 20px;
+    }
+
+    .skilline .btn:hover {
+        opacity: 0.9;
+    }
+
+}
+@media all and (min-width: 577px) {
+    .skilline {
+        margin-bottom: 160px;
+    }
+
+    .skilline p {
+        width: 100%;
+        max-width: 1101px;
+        margin: auto;
+        margin-bottom: 80px;
+    }
+
+    .skilline__content {
+        display: flex;
+        justify-content: center;
+    }
+
+    .skilline__card {
+        margin-bottom: 0;
+    }
+
+    .skilline__card:first-child {
+        margin-right: 100px;
+    }
+}

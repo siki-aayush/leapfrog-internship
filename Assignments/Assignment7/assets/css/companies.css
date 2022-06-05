@@ -1,0 +1,32 @@
+@media all and (min-width: 70px) {
+    .companies {
+        margin-bottom: 50px;
+    }
+
+    .companies h4 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+
+    .companies__logo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .companies__logo > img {
+        margin: 10px 19px;
+        width: 105px;
+    }
+
+
+}
+
+@media all and (min-width: 577px) {
+    .companies {
+        margin-bottom: 160px;
+    }
+
+}

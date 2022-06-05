@@ -1,0 +1,141 @@
+@media all and (min-width: 70px) {
+
+    .features {
+        text-align: center;
+        margin-bottom: 90px;
+    }
+
+    .features h2 {
+        margin-bottom: 10px;
+    }
+
+    .features > p {
+        margin-bottom: 20px;
+    }
+
+    .features__img {
+        margin-bottom: 30px;
+    }
+
+    .features__img img {
+        width: 100%;
+
+    }
+
+    .features__content {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 70px;
+    }
+
+    .features__content:nth-last-child(2) {
+        margin-bottom: 30px;
+    }
+
+    .features__desc {
+        margin-bottom: 20px;
+    }
+
+    .features__desc__title {
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    .features__desc__el {
+        display: flex;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    .features--wrapper {
+        width: 60px;
+        height: 60px;
+        background-color: white;
+        box-shadow: 0px 15px 44px rgba(13, 15, 28, 0.12);
+        margin-right: 25px
+    }
+
+    .features__desc__info {
+        text-align: justify;
+        text-align-last: center;
+
+    }
+
+}
+
+
+@media all and (min-width: 577px) {
+    .features {
+        margin-bottom: 160px;
+    }
+
+    .features > p {
+        margin-bottom: 100px;
+
+    }
+
+    .features__content {
+        width: 85%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .features__desc {
+        max-width: 562px;
+        margin: 0 50px
+    }
+
+
+    .features__desc__title {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 160%;
+        margin-bottom: 51px;
+        text-align: left;
+    }
+
+    .features__desc__info {
+        text-align: left;
+        text-align-last: left;
+    }
+
+    .features__desc__el {
+        margin-bottom: 40px;
+    }
+
+    .features--wrapper {
+        margin-right: 42px;
+
+    }
+
+    .reverse--features__content {
+        flex-direction: row-reverse;
+    }
+
+
+    /* Heading max wdth */
+
+    .features__desc .tools {
+        max-width: 393px;
+    }
+
+    .features__desc .assessment {
+        max-width: 347px;
+    }
+
+    .features__desc .mgmt {
+        max-width: 420px;
+    }
+
+    .features__desc .discussions {
+        max-width: 274px;
+    }
+
+    .features .btn {
+        padding: 18px 38px;
+    }
+
+
+
+}

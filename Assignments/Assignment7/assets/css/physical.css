@@ -1,0 +1,126 @@
+@media screen and (min-width: 70px) {
+
+    .physical {
+        text-align: center;
+        margin-bottom: 90px
+    }
+
+    .physical h2 {
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+
+    .physical p {
+        text-align: justify;
+        text-align-last: center;
+        margin-bottom: 20px;
+    }
+
+    .physical__content a {
+        text-decoration: underline;
+    }
+
+    .physical__content {
+        margin-bottom: 40px;
+    }
+
+
+    .physical__img {
+        position: relative;
+    }
+
+    .physical__img .physical_bg {
+        width: 100%;
+    }
+
+    .physical .wrapper {
+        width: 70px;
+        height: 70px;
+        background-color: white;
+    }
+
+    .physical .wrapper img {
+        transform: translate(-40%, -50%);
+    }
+
+    .square_blue {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        z-index: -1;
+        width: 80px;
+        height: 80px;
+
+    }
+
+    .square_orange {
+        position: absolute;
+        bottom: -10px;
+        right: -10px;
+        z-index: -1;
+        width: 120px;
+        height: 120px;
+    }
+
+
+}
+
+@media all and (min-width: 577px) {
+
+    .physical {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 5;
+    }
+
+    .physical.container {
+        width: 75%;
+    }
+
+    .physical__content {
+        text-align: left;
+        max-width: 730px;
+        margin-right: 67px;
+        margin-bottom: 0
+    }
+
+
+    .physical h2 {
+        font-weight: 500;
+        margin-bottom: 30px;
+        line-height: 58px;
+    }
+
+    .physical p {
+        text-align: left;
+        text-align-last: left;
+        margin-bottom: 30px;
+    }
+
+    .physical__content a {
+        font-size: medium;
+    }
+
+    .square_blue {
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        z-index: -1;
+        width: 138px;
+        height: 138px;
+
+    }
+
+    .square_orange {
+        position: absolute;
+        bottom: -20px;
+        right: -20px;
+        z-index: -1;
+        width: 231px;
+        height: 231px;
+    }
+
+
+}
