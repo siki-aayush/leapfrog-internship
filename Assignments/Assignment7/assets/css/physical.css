@@ -8,12 +8,14 @@
     .physical h2 {
         font-weight: 500;
         margin-bottom: 20px;
+        position: relative;
     }
 
     .physical p {
         text-align: justify;
         text-align-last: center;
         margin-bottom: 20px;
+        position: relative;
     }
 
     .physical__content a {
@@ -60,6 +62,30 @@
         z-index: -1;
         width: 120px;
         height: 120px;
+    }
+
+
+    .physical__heading::after {
+        content: "";
+        width: 73px;
+        height: 73px;
+        position: absolute;
+        top: -13px;
+        left: -25px;
+        background-color: #F4B767;
+        border-radius: 50%;
+        z-index: -1;
+    }
+
+    .physical__desc::after {
+        content: "";
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 50%;
+        right: 35px;
+        background-color: #F4B767;
+        border-radius: 50%;
     }
 
 
