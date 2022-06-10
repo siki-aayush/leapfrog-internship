@@ -28,7 +28,6 @@ body.appendChild(container);
  * When device screen is resized the container gets resized accordingly
  */
 window.addEventListener('resize', () => {
-    console.log("testing", window.innerWidth, window.innerHeight);
     containerWidth = window.innerWidth - offset;
     containerHeight = window.innerHeight - offset;
     container.style.width = containerWidth + "px";
