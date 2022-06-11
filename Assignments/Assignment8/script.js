@@ -53,7 +53,7 @@ window.addEventListener('resize', () => {
  * speed = Number, collisionDir = Object
  */
 function isCollision(x1, y1, r1, x2, y2, r2) {
-    let squareDist = (x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1);
+    let squareDist = Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2);
     let squareRadius = (r1 + r2) * (r1 + r2);
     return squareDist <= squareRadius;
 }
@@ -223,21 +223,44 @@ function getRandomInt(min, max) {
  * Generates specified number of Circles with random data
  * num = Number
  */
+function getDist(x1, y1, x2, y2) {
+    return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+}
+
 function getRandomCircles(num) {
     let data = [];
     for (let i = 0; i < num; i++) {
-        data.push(new Circle(
-            getRandomInt(0, containerWidth),
-            getRandomInt(0, containerHeight),
-            getRandomInt(-80, 80),
-            getRandomInt(-80, 80),
-            getRandomInt(10, 30),
-        ));
+        let radius = getRandomInt(10, 30);
+        let x = getRandomInt(0, containerWidth - radius * 2);
+        let y = getRandomInt(0, containerHeight - radius * 2);
+        let dx = getRandomInt(-80, 80);
+        let dy = getRandomInt(-80, 80);
+
+        if (i !== 0) {
+            for (let j = 0; j < data.length; j++) {
+                let obj = data[j];
+                if (
+                    getDist(
+                        x + radius,
+                        y + radius,
+                        obj.x + obj.r,
+                        obj.y + obj.r
+                    ) <=
+                    radius + obj.r
+                ) {
+                    x = getRandomInt(0, containerWidth - radius * 2);
+                    y = getRandomInt(0, containerHeight - radius * 2);
+                    j = -1;
+                }
+            }
+        }
+
+        console.log(x, y);
+        data.push(new Circle(x, y, dx, dy, radius));
     }
 
     return data;
 }
-
 
 // Generates random circles
 const circles = getRandomCircles(200);
