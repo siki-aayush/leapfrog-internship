@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <script src="scripts/variables.js" defer></script>
+    <script src="scripts/functions.js" defer></script>
+    <script src="scripts/index.js" defer></script>
+    <title>Car Game</title>
+</head>
+
+<body>
+
+    <div class="modal modal--start">
+        <h2 class="modal__title">CAR LANE GAME</h2>
+        <div class="modal__desc">
+            <p>"A" To move left</p>
+            <p>"D" To move right</p>
+        </div>
+        <a href="#" class="btn modal__btn">start</a>
+    </div>
+
+    <div class="score">
+        <div class="score__current"></div>
+        <div class="score__highscore"></div>
+    </div>
+
+    <canvas> </canvas>
+
+    <div class="modal modal--end hide">
+        <h2 class="modal__title">Game Over!!</h2>
+        <div class="modal__score">Score: 20</div>
+        <div class="modal__highscore">HighScore:300</div>
+        <a href="#" class="btn modal__btn">Replay!!</a>
+    </div>
+</body>
+
+</html>
