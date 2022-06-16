@@ -1,6 +1,6 @@
 // Canvas
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+//const canvas = document.getElementById("canvas");
+//const ctx = canvas.getContext("2d");
 
 // Variablesl
 let frames = 0;

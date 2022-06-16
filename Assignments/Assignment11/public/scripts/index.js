@@ -1,95 +1,101 @@
-const bg = new Background();
-const land = new Land();
-const bird = new Bird();
-const getReadyMsg = new GetReadyMsg();
-const getReadyBird = new GetReadyBird();
-const gameOver = new GameOver();
-const gameOverMsg = new GameOverMsg();
-const pipes = new Pipe();
-const score = new Score();
+class Game {
+    constructor(id) {
+        // Extract canvas and get context
+        this.canvas = document.getElementById(id);
+        this.ctx = this.canvas.getContext("2d");
 
-document.addEventListener("click", () => {
-    switch (gameState.current) {
-        case gameState.ready:
-            gameState.current = gameState.playing;
-            swooshSound.play();
-            break;
+        // Initialize all the objects
+        this.bg = new Background(this.canvas);
+        this.land = new Land(this.canvas);
+        this.bird = new Bird();
+        this.getReadyMsg = new GetReadyMsg();
+        this.getReadyBird = new GetReadyBird();
+        this.gameOver = new GameOver();
+        this.gameOverMsg = new GameOverMsg();
+        this.pipes = new Pipe();
+        this.score = new Score();
 
-        case gameState.playing:
-            if (bird.y - bird.radius <= 0) return;
-            bird.flap();
-            flapSound.play();
-            break;
-
-        case gameState.over:
-            bird.speed = 0;
-            pipes.pipeList = [];
-            score.current = 0;
-            gameState.current = gameState.ready;
-            break;
-
-        default:
-            break;
+        this.frames = 0;
+        this.gameState = {
+            current: 0,
+            ready: 0,
+            playing: 1,
+            over: 2,
+        };
     }
-});
 
-document.addEventListener("keyup", (e) => {
-    switch (gameState.current) {
-        case gameState.ready:
-            if (e.key === " ") {
-                gameState.current = gameState.playing;
-                swooshSound.play();
-            }
-            break;
+    draw() {
+        this.ctx.fillStyle = "#70c5ce";
+        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
 
-        case gameState.playing:
-            if (e.key === " ") {
-                if (bird.y - bird.radius <= 0) return;
-                bird.flap();
-                flapSound.play();
-            }
-            break;
-
-        case gameState.over:
-            if (e.key === " ") {
-                bird.speed = 0;
-                pipes.pipeList = [];
-                score.current = 0;
-                gameState.current = gameState.ready;
-            }
-            break;
-
-        default:
-            break;
+        this.bg.draw(this.ctx);
+        this.pipes.draw(this.canvas, this.ctx);
+        this.land.draw(this.ctx);
+        this.bird.draw(this.ctx);
+        this.getReadyBird.draw(this.canvas, this.ctx, this.gameState);
+        this.getReadyMsg.draw(this.canvas, this.ctx, this.gameState);
+        this.gameOverMsg.draw(this.canvas, this.ctx, this.gameState);
+        this.gameOver.draw(this.canvas, this.ctx, this.gameState);
+        this.score.draw(this.canvas, this.ctx, this.gameState);
     }
-});
 
-function draw() {
-    ctx.fillStyle = "#70c5ce";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    update() {
+        this.bird.update(this.canvas, this.gameState, this.land, this.frames);
+        this.land.update(this.canvas, this.gameState);
+        this.pipes.update(
+            this.canvas,
+            this.bird,
+            this.gameState,
+            this.score,
+            this.frames
+        );
+    }
 
-    bg.draw();
-    pipes.draw();
-    land.draw();
-    bird.draw();
-    getReadyBird.draw();
-    getReadyMsg.draw();
-    gameOverMsg.draw();
-    gameOver.draw();
-    score.draw();
+    animate() {
+        this.update();
+        this.draw();
+        this.frames++;
+        //console.log("testsing");
+        requestAnimationFrame(this.animate.bind(this));
+    }
+
+    init() {
+        ["click", "keyup"].forEach((ev) => {
+            this.canvas.addEventListener(ev, (event) => {
+                switch (this.gameState.current) {
+                    case this.gameState.ready:
+                        console.log(ev, event.key);
+                        if (ev === "keyup" && event.key !== " ") break;
+                        this.gameState.current = this.gameState.playing;
+                        swooshSound.play();
+                        break;
+
+                    case this.gameState.playing:
+                        if (ev === "keyup" && event.key !== " ") break;
+                        if (this.bird.y - this.bird.radius <= 0) return;
+                        this.bird.flap();
+                        flapSound.play();
+                        break;
+
+                    case this.gameState.over:
+                        if (ev === "keyup" && event.key !== " ") break;
+                        this.bird.speed = 0;
+                        this.pipes.pipeList = [];
+                        this.score.current = 0;
+                        this.gameState.current = this.gameState.ready;
+                        break;
+
+                    default:
+                        break;
+                }
+            });
+        });
+
+        this.animate();
+    }
 }
 
-function update() {
-    bird.update();
-    land.update();
-    pipes.update();
-}
-
-function animate() {
-    update();
-    draw();
-    frames++;
-    requestAnimationFrame(animate);
-}
-
-animate();
+const game1 = new Game("canvas1");
+const game2 = new Game("canvas2");
+game1.init();
+game2.init();

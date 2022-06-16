@@ -1,5 +1,5 @@
 class Background {
-    constructor() {
+    constructor(canvas) {
         this.spriteX = 146;
         this.spriteY = 0;
         this.spriteW = 144;
@@ -10,7 +10,7 @@ class Background {
         this.h = canvas.height;
     }
 
-    draw() {
+    draw(ctx) {
         ctx.drawImage(
             sprite,
             this.spriteX,
@@ -26,7 +26,7 @@ class Background {
 }
 
 class Land {
-    constructor() {
+    constructor(canvas) {
         this.spriteX = 292;
         this.spriteY = 0;
         this.spriteW = 168;
@@ -38,7 +38,7 @@ class Land {
         this.dx = 3;
     }
 
-    draw() {
+    draw(ctx) {
         ctx.drawImage(
             sprite,
             this.spriteX,
@@ -52,7 +52,7 @@ class Land {
         );
     }
 
-    update() {
+    update(canvas, gameState) {
         if (gameState.current === gameState.playing) {
             this.x = (this.x - this.dx) % (canvas.width / 2);
         }
@@ -81,7 +81,7 @@ class Bird {
         this.radius = 20;
     }
 
-    draw() {
+    draw(ctx) {
         let birdPos = this.state[this.frame];
 
         ctx.save();
@@ -101,7 +101,7 @@ class Bird {
         ctx.restore();
     }
 
-    update() {
+    update(canvas, gameState, land, frames) {
         // Spped of bird flapping
         this.period = gameState.current === gameState.ready ? 10 : 5;
         // Incremnt frame by 1 on each period
@@ -159,7 +159,7 @@ class Pipe {
         this.boundaryTopY = -150;
     }
 
-    draw() {
+    draw(canvas, ctx) {
         for (let i = 0; i < this.pipeList.length; i++) {
             let pipe = this.pipeList[i];
             let topPos = pipe.y;
@@ -192,7 +192,7 @@ class Pipe {
         }
     }
 
-    update() {
+    update(canvas, bird, gameState, score, frames) {
         if (gameState.current !== gameState.playing) return;
         if (frames % 150 === 0) {
             this.pipeList.push({
@@ -252,7 +252,7 @@ class GetReadyMsg {
         this.h = 90;
     }
 
-    draw() {
+    draw(canvas, ctx, gameState) {
         if (gameState.current === gameState.ready) {
             ctx.drawImage(
                 sprite,
@@ -281,7 +281,7 @@ class GetReadyBird {
         this.h = 125;
     }
 
-    draw() {
+    draw(canvas, ctx, gameState) {
         if (gameState.current === gameState.ready) {
             ctx.drawImage(
                 sprite,
@@ -324,7 +324,7 @@ class GameOverMsg {
         this.h = 90;
     }
 
-    draw() {
+    draw(canvas, ctx, gameState) {
         if (gameState.current === gameState.over) {
             ctx.drawImage(
                 sprite,
@@ -353,7 +353,7 @@ class GameOver {
         this.h = 150;
     }
 
-    draw() {
+    draw(canvas, ctx, gameState) {
         if (gameState.current === gameState.over) {
             ctx.drawImage(
                 sprite,
@@ -376,7 +376,7 @@ class Score {
         this.current = 0;
     }
 
-    draw() {
+    draw(canvas, ctx, gameState) {
         ctx.fillStyle = "#FFF";
         if (gameState.current === gameState.playing) {
             ctx.lineWidth = 2;
