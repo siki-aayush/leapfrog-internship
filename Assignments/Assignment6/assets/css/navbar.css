@@ -51,6 +51,11 @@
         clear: left;
         float: none;
         margin-top: 60%;
+
+        /*position: absolute;*/
+        /*width: 90%;*/
+        /*top: 110px;*/
+        /*transition: all 300ms ease-in-out;*/
     }
 
     .nav__links li {
@@ -62,5 +67,7 @@
 
     .nav__disp {
         display: none;
+
+        top: -800px;
     }
 }
