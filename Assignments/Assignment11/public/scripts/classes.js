@@ -1,38 +1,6 @@
-// Canvas
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-
-// Variables
-let frames = 0;
-const gameState = {
-    current: 0,
-    ready: 0,
-    playing: 1,
-    over: 2,
-};
-const DEGREE = Math.PI / 180;
-
-const sprite = new Image();
-sprite.src = "./assets/icons/sprite_test.png";
-
-const scoreSound = new Audio();
-scoreSound.src = "./assets/audio/sfx_point.wav";
-
-const flapSound = new Audio();
-flapSound.src = "./assets/audio/sfx_flap.wav";
-
-const hitSound = new Audio();
-hitSound.src = "./assets/audio/sfx_hit.wav";
-
-const swooshSound = new Audio();
-swooshSound.src = "./assets/audio/sfx_swooshing.wav";
-
-const dieSound = new Audio();
-dieSound.src = "./assets/audio/sfx_die.wav";
-
 class Background {
     constructor() {
-        this.spriteX = 0;
+        this.spriteX = 146;
         this.spriteY = 0;
         this.spriteW = 144;
         this.spriteH = 256;
@@ -280,8 +248,8 @@ class GetReadyMsg {
         this.spriteH = 25;
         this.x = 100;
         this.y = 150;
-        this.w = 250;
-        this.h = 100;
+        this.w = 300;
+        this.h = 90;
     }
 
     draw() {
@@ -338,8 +306,8 @@ class GameOverMsg {
         this.spriteH = 21;
         this.x = 100;
         this.y = 150;
-        this.w = 250;
-        this.h = 100;
+        this.w = 300;
+        this.h = 90;
     }
 
     draw() {
@@ -411,67 +379,3 @@ class Score {
         }
     }
 }
-
-const bg = new Background();
-const land = new Land();
-const bird = new Bird();
-const getReadyMsg = new GetReadyMsg();
-const getReadyBird = new GetReadyBird();
-const gameOver = new GameOver();
-const gameOverMsg = new GameOverMsg();
-const pipes = new Pipe();
-const score = new Score();
-
-document.addEventListener("click", () => {
-    switch (gameState.current) {
-        case gameState.ready:
-            gameState.current = gameState.playing;
-            swooshSound.play();
-            break;
-
-        case gameState.playing:
-            bird.flap();
-            flapSound.play();
-            break;
-
-        case gameState.over:
-            bird.speed = 0;
-            pipes.pipeList = [];
-            score.current = 0;
-            gameState.current = gameState.ready;
-            break;
-
-        default:
-            break;
-    }
-});
-
-function draw() {
-    ctx.fillStyle = "#70c5ce";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    bg.draw();
-    land.draw();
-    bird.draw();
-    pipes.draw();
-    getReadyBird.draw();
-    getReadyMsg.draw();
-    gameOverMsg.draw();
-    gameOver.draw();
-    score.draw();
-}
-
-function update() {
-    bird.update();
-    land.update();
-    pipes.update();
-}
-
-function animate() {
-    update();
-    draw();
-    frames++;
-    requestAnimationFrame(animate);
-}
-
-animate();
