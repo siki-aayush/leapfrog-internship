@@ -294,6 +294,20 @@ class GetReadyBird {
                 this.w,
                 this.h
             );
+
+            ctx.font = "22px Sans";
+            ctx.fillStyle = "#FFF";
+            ctx.fillText(
+                "Press Spacebar or Click ",
+                canvas.width / 2 - 130,
+                canvas.height / 2 + 100
+            );
+            ctx.fillText(
+                "To start the game",
+                canvas.width / 2 - 95,
+                canvas.height / 2 + 130
+            );
+            //ctx.strokeText();
         }
     }
 }

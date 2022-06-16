@@ -16,6 +16,7 @@ document.addEventListener("click", () => {
             break;
 
         case gameState.playing:
+            if (bird.y - bird.radius <= 0) return;
             bird.flap();
             flapSound.play();
             break;
@@ -25,6 +26,37 @@ document.addEventListener("click", () => {
             pipes.pipeList = [];
             score.current = 0;
             gameState.current = gameState.ready;
+            break;
+
+        default:
+            break;
+    }
+});
+
+document.addEventListener("keyup", (e) => {
+    switch (gameState.current) {
+        case gameState.ready:
+            if (e.key === " ") {
+                gameState.current = gameState.playing;
+                swooshSound.play();
+            }
+            break;
+
+        case gameState.playing:
+            if (e.key === " ") {
+                if (bird.y - bird.radius <= 0) return;
+                bird.flap();
+                flapSound.play();
+            }
+            break;
+
+        case gameState.over:
+            if (e.key === " ") {
+                bird.speed = 0;
+                pipes.pipeList = [];
+                score.current = 0;
+                gameState.current = gameState.ready;
+            }
             break;
 
         default:
