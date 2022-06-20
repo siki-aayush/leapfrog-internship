@@ -40,11 +40,7 @@ class Carousel {
         this.intervalId = setInterval(() => {
             this.CURRENT_SLIDE === this.MAX_SLIDES - 1
                 ? this.swipe(this.CURRENT_SLIDE, 0, -0.05)
-                : this.swipe(
-                    this.CURRENT_SLIDE,
-                    this.CURRENT_SLIDE + 1,
-                    0.01
-                );
+                : this.swipe(this.CURRENT_SLIDE, this.CURRENT_SLIDE + 1, 0.01);
         }, (Math.random() * 6 + 2) * 1000);
     }
 
@@ -52,19 +48,20 @@ class Carousel {
     disableBtns() {
         this.next.style.pointerEvents = "none";
         this.prev.style.pointerEvents = "none";
+        this.dots.forEach((dot) => (dot.style.pointerEvents = "none"));
     }
 
     // Enables the buttons
     enableBtns() {
         this.next.style.pointerEvents = "auto";
         this.prev.style.pointerEvents = "auto";
+        this.dots.forEach((dot) => (dot.style.pointerEvents = "auto"));
     }
 
-
-
-    //Swipe slide
+    // Swipe slide
     swipe(prevIdx, nextIdx, increment) {
         this.disableBtns();
+        clearInterval(this.intervalId);
 
         this.dots[prevIdx].classList.remove("active");
         this.dots[nextIdx].classList.add("active");
@@ -73,19 +70,16 @@ class Carousel {
             prevIdx += increment;
             prevIdx = parseFloat(prevIdx.toFixed(2));
 
-            //this.wrapper.style.left = -prevIdx * 600 + "px";
             this.wrapper.style.left = -prevIdx * 100 + "%";
 
             if (prevIdx === nextIdx) {
                 this.enableBtns();
                 this.CURRENT_SLIDE = nextIdx;
                 clearInterval(id);
+                this.automate();
             }
         }, 5);
-
-
     }
-
 
     initializeEventListeners() {
         /**
@@ -94,20 +88,9 @@ class Carousel {
          */
         this.next.addEventListener("click", () => {
             if (this.CURRENT_SLIDE === this.MAX_SLIDES - 1) {
-                //this.swipeRight(this.CURRENT_SLIDE, 0, -0.05);
                 this.swipe(this.CURRENT_SLIDE, 0, -0.05);
             } else {
-                //this.swipeRight(
-                //    this.CURRENT_SLIDE,
-                //    this.CURRENT_SLIDE + 1,
-                //    0.01
-                //);
-
-                this.swipe(
-                    this.CURRENT_SLIDE,
-                    this.CURRENT_SLIDE + 1,
-                    0.01
-                );
+                this.swipe(this.CURRENT_SLIDE, this.CURRENT_SLIDE + 1, 0.01);
             }
             this.automate();
         });
@@ -118,23 +101,18 @@ class Carousel {
          */
         this.prev.addEventListener("click", () => {
             if (this.CURRENT_SLIDE === 0) return;
-            //this.swipeLeft(this.CURRENT_SLIDE, this.CURRENT_SLIDE - 1, -0.01);
             this.swipe(this.CURRENT_SLIDE, this.CURRENT_SLIDE - 1, -0.01);
             this.automate();
         });
 
-        /**
-         * Stops the interval when the user leaves the browser tab
-         */
+        // Stops the interval when the user leaves the browser tab
         document.addEventListener("visibilitychange", () => {
             document.visibilityState === "visible"
                 ? this.automate()
                 : clearInterval(this.intervalId);
         });
 
-        /**
-         * Pagination Event listener
-         */
+        // Pagination Event listener
         this.images.forEach((_, idx) => {
             const dot = document.createElement("div");
             dot.classList.add("carousel__pagination__dot");
@@ -142,11 +120,10 @@ class Carousel {
                 this.dots[this.CURRENT_SLIDE].classList.add("active");
 
             dot.addEventListener("click", () => {
-                this.dots[this.CURRENT_SLIDE].classList.remove("active");
-                this.CURRENT_SLIDE = idx;
-                this.dots[this.CURRENT_SLIDE].classList.add("active");
-                //this.wrapper.style.left = -this.CURRENT_SLIDE * 600 + "px";
-                this.wrapper.style.left = -this.CURRENT_SLIDE * 100 + "%";
+                if (this.CURRENT_SLIDE !== idx) {
+                    let increment = this.CURRENT_SLIDE > idx ? -0.02 : 0.02;
+                    this.swipe(this.CURRENT_SLIDE, idx, increment);
+                }
             });
 
             this.dots.push(dot);
@@ -154,7 +131,7 @@ class Carousel {
         });
     }
 
-    //Initializes all the event listeners
+    // Initializes all the event listeners
     init() {
         this.initializeEventListeners();
         this.automate();
